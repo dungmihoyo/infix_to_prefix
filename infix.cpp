@@ -26,9 +26,11 @@ void TransformToPrefix( string infix, string &prefix) {
     char element ; 
     for( int i = 0; i < length; i++ ) {
         element = infix[i] ; 
-        cout << element << endl; 
         if ( !isdigit(element) ) { 
+            
             prefix.push_back(element) ; 
+            prefix.push_back( ' ' ) ;
+            number.EnQuence( ' ' ) ; 
         }
         else { 
             number.EnQuence(element) ; 
